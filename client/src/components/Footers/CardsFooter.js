@@ -31,7 +31,7 @@ class CardsFooter extends React.Component {
                   Let's get in touch on any of these platforms.
                 </h4>
               </Col>
-              <Col className="text-lg-center btn-wrapper" lg="6">
+              <Col className="text-lg-center btn-wrapper justify-content-end" lg="6">
                 <Button
                   className="btn-icon-only rounded-circle"
                   color="twitter"
@@ -68,7 +68,7 @@ class CardsFooter extends React.Component {
                 <div className="copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
+                    href="https://www.abdulqudus.com"
                     target="_blank"
                   >
                     The Qoder
@@ -88,7 +88,7 @@ class CardsFooter extends React.Component {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="http://www.abduqludus.com/blog"
+                      href="https://www.abduqludus.com/blog"
                       target="_blank"
                     >
                       Blog
