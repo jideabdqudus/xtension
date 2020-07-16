@@ -1,24 +1,8 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class Hero extends React.Component {
   render() {
@@ -51,25 +35,24 @@ class Hero extends React.Component {
                       style={{ width: "200px" }}
                     />
                     <p className="lead text-white">
-                      A beautiful Design System for Bootstrap 4. It's Free and
-                      Open Source.
+                      Lt us promote your opportunities to our community of top
+                      technical talents across Africa. We save you a lot of time
+                      and headache in identifying the right profile.
                     </p>
                     <div className="btn-wrapper mt-5">
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0"
                         color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
                         size="lg"
                       >
                         <span className="btn-inner--icon mr-1">
                           <i className="ni ni-cloud-download-95" />
                         </span>
-                        <span className="btn-inner--text">Download React</span>
+                        <span className="btn-inner--text"><Link to="/login-page">Log In</Link></span>
                       </Button>{" "}
                       <Button
                         className="btn-icon mb-3 mb-sm-0"
                         color="github"
-                        href="https://github.com/creativetimofficial/argon-design-system-react"
                         size="lg"
                         target="_blank"
                       >
@@ -77,20 +60,20 @@ class Hero extends React.Component {
                           <i className="fa fa-github" />
                         </span>
                         <span className="btn-inner--text">
-                          <span className="text-warning mr-1">Star us</span>
-                          on Github
+                         <Link to='/register-page'> <span className="text-warning mr-1">Just</span>
+                          Register</Link>
                         </span>
                       </Button>
                     </div>
                     <div className="mt-5">
                       <small className="text-white font-weight-bold mb-0 mr-2">
-                        *proudly coded by
+                        refactored by
                       </small>
                       <img
                         alt="..."
                         className="ml-1"
-                        style={{ height: "28px" }}
-                        src={require("assets/img/brand/creativetim-white-slim.png")}
+                        style={{ height: "40px" }}
+                        src={require("assets/img/brand/ja.png")}
                       />
                     </div>
                   </Col>
