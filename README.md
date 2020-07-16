@@ -1,8 +1,4 @@
-
 ## www.abdulqudus.com
-
-
-
 
 In the project directory, you can run:
 
