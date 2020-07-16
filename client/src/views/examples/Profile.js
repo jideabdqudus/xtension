@@ -180,7 +180,7 @@ class Profile extends React.Component {
                                 <b>Location:</b> Lagos
                               </p>
                               <p className="description">
-                                <b>Description:</b> eCommerce
+                                <b>Description:</b> IT
                               </p>
                             </TabPane>
                           </TabContent>
