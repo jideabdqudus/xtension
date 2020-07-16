@@ -20,6 +20,7 @@ import {
 //core components
 import DemoNavbar from "components/Navbars/DemoNavbar";
 import SimpleFooter from "components/Footers/SimpleFooter";
+import Developers from "../layers/Developers";
 
 const DevelopersList = () => {
   return (
@@ -47,45 +48,10 @@ const DevelopersList = () => {
                     <h1 className="display-3 text-white">
                       Developers List <span>satisfy your tech needs</span>
                     </h1>
-                    <hr/>
-                    <br/>
+                    <hr />
+                    <br />
                     <Row className="justify-content-center">
-                      <Col lg="6">
-                        <Card className="shadow">
-                          <CardBody>
-                            <TabContent>
-                              <TabPane>
-                                <p className="description">
-                                  Raw denim you probably haven't heard of them
-                                  jean shorts Austin. Nesciunt tofu stumptown
-                                  aliqua, retro synth master cleanse. Mustache
-                                  cliche tempor, williamsburg carles vegan
-                                  helvetica. Reprehenderit butcher retro
-                                  keffiyeh dreamcatcher synth.
-                                </p>
-                              </TabPane>
-                            </TabContent>
-                          </CardBody>
-                        </Card>
-                      </Col>
-                      <Col lg="6">
-                        <Card className="shadow">
-                          <CardBody>
-                            <TabContent>
-                              <TabPane>
-                                <p className="description">
-                                  Raw denim you probably haven't heard of them
-                                  jean shorts Austin. Nesciunt tofu stumptown
-                                  aliqua, retro synth master cleanse. Mustache
-                                  cliche tempor, williamsburg carles vegan
-                                  helvetica. Reprehenderit butcher retro
-                                  keffiyeh dreamcatcher synth.
-                                </p>
-                              </TabPane>
-                            </TabContent>
-                          </CardBody>
-                        </Card>
-                      </Col>
+                      <Developers />
                     </Row>
                   </Col>
                 </Row>
@@ -97,21 +63,17 @@ const DevelopersList = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
                 version="1.1"
-                viewBox="0 0 2560 100"
+                viewBox="0 0 1560 100"
                 x="0"
                 y="0"
               >
-                <polygon
-                  className="fill-white"
-                  points="2560 0 2560 100 0 100"
-                />
+                <polygon className="fill-white" points="260 0 1460 100 0 100" />
               </svg>
             </div>
           </section>
           {/* 1st Hero Variation */}
         </div>
       </main>
-      <SimpleFooter />
     </>
   );
 };

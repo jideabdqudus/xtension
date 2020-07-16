@@ -1,24 +1,7 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import { Button, Card, Container, Row, Col, Badge } from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -26,7 +9,7 @@ import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 class Profile extends React.Component {
   componentDidMount() {
-    document.documentElement.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
@@ -70,7 +53,7 @@ class Profile extends React.Component {
                   <Row className="justify-content-center">
                     <Col className="order-lg-2" lg="3">
                       <div className="card-profile-image">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           <img
                             alt="..."
                             className="rounded-circle"
@@ -84,39 +67,47 @@ class Profile extends React.Component {
                       lg="4"
                     >
                       <div className="card-profile-actions py-4 mt-lg-0">
-                        <Button
-                          className="mr-4"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Connect
-                        </Button>
-                        <Button
-                          className="float-right"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Message
-                        </Button>
+                        <Badge color="primary" pill className="mr-1">
+                          C#
+                        </Badge>
+                        <Badge color="primary" pill className="mr-1">
+                          PHP
+                        </Badge>
+                        <Badge color="primary" pill className="mr-1">
+                          JAVASCRIPT
+                        </Badge>
+                        <Badge color="primary" pill className="mr-1">
+                          RUBY
+                        </Badge>
                       </div>
                     </Col>
                     <Col className="order-lg-1" lg="4">
                       <div className="card-profile-stats d-flex justify-content-center">
                         <div>
-                          <span className="heading">22</span>
-                          <span className="description">Friends</span>
+                          <Button
+                            className="btn-icon-only rounded-circle"
+                            color="twitter"
+                            href="https://twitter.com/jideabdqudus"
+                            id="tooltip475038071"
+                            target="_blank"
+                          >
+                            <span className="btn-inner--icon">
+                              <i className="fa fa-twitter" />
+                            </span>
+                          </Button>
                         </div>
                         <div>
-                          <span className="heading">10</span>
-                          <span className="description">Photos</span>
-                        </div>
-                        <div>
-                          <span className="heading">89</span>
-                          <span className="description">Comments</span>
+                          <Button
+                            className="btn-icon-only rounded-circle ml-1"
+                            color="github"
+                            href="https://github.com/jideabdqudus"
+                            id="tooltip49550721"
+                            target="_blank"
+                          >
+                            <span className="btn-inner--icon">
+                              <i className="fa fa-github" />
+                            </span>
+                          </Button>
                         </div>
                       </div>
                     </Col>
@@ -124,7 +115,6 @@ class Profile extends React.Component {
                   <div className="text-center mt-5">
                     <h3>
                       Jessica Jones{" "}
-                      <span className="font-weight-light">, 27</span>
                     </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
@@ -149,7 +139,7 @@ class Profile extends React.Component {
                           giving it a warm, intimate feel with a solid groove
                           structure. An artist of considerable range.
                         </p>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           Show more
                         </a>
                       </Col>
