@@ -83,32 +83,7 @@ class Profile extends React.Component {
                     </Col>
                     <Col className="order-lg-1" lg="4">
                       <div className="card-profile-stats d-flex justify-content-center">
-                        <div>
-                          <Button
-                            className="btn-icon-only rounded-circle"
-                            color="twitter"
-                            href="https://twitter.com/jideabdqudus"
-                            id="tooltip475038071"
-                            target="_blank"
-                          >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-twitter" />
-                            </span>
-                          </Button>
-                        </div>
-                        <div>
-                          <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="github"
-                            href="https://github.com/jideabdqudus"
-                            id="tooltip49550721"
-                            target="_blank"
-                          >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-github" />
-                            </span>
-                          </Button>
-                        </div>
+                        
                       </div>
                     </Col>
                   </Row>
@@ -124,10 +99,35 @@ class Profile extends React.Component {
                       <i className="ni business_briefcase-24 mr-2" />
                       Solution Manager - Creative Tim Officer
                     </div>
-                    <div>
-                      <i className="ni education_hat mr-2" />
-                      University of Computer Science
-                    </div>
+                    <Row className="justify-content-center">
+                      <div>
+                          <Button
+                            className="btn-icon-only rounded-circle"
+                            color="twitter"
+                            href="https://twitter.com/jideabdqudus"
+                            id="tooltip475038071"
+                            target="_blank"
+                          >
+                            <span className="btn-inner--icon">
+                              <i className="fa fa-twitter" />
+                            </span>
+                          </Button>
+                        </div>
+                        
+                        <div>
+                          <Button
+                            className="btn-icon-only rounded-circle ml-1"
+                            color="github"
+                            href="https://github.com/jideabdqudus"
+                            id="tooltip49550721"
+                            target="_blank"
+                          >
+                            <span className="btn-inner--icon">
+                              <i className="fa fa-github" />
+                            </span>
+                          </Button>
+                        </div>
+                    </Row>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
@@ -150,7 +150,6 @@ class Profile extends React.Component {
             </Container>
           </section>
         </main>
-        <SimpleFooter />
       </>
     );
   }
