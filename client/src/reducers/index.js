@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
 
-exort default combineReducers({
-    
+export default combineReducers({
+
 })
