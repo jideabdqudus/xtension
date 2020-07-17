@@ -14,6 +14,7 @@ import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import DevelopersList from "views/IndexSections/unit/DevelopersList";
 import Dashboard from "views/IndexSections/unit/Dashboard";
+import EditProfile from "views/IndexSections/unit/EditProfile";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -44,6 +45,11 @@ ReactDOM.render(
         path='/dashboard'
         exact
         render={props=> <Dashboard {...props}/>}
+      />
+      <Route
+        path='/edit-profile'
+        exact
+        render={props=> <EditProfile {...props}/>}
       />
       <Redirect to="/" />
     </Switch>
