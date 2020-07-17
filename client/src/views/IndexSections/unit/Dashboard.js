@@ -12,11 +12,13 @@ import {
   InputGroupText,
   InputGroup,
   Container,
+  Table,
   Row,
   Col,
 } from "reactstrap";
 import DashboardNav from "../layers/DashboardNav";
 import { Link } from "react-router-dom";
+import SimpleFooter from "components/Footers/SimpleFooter";
 
 const Dashboard = () => {
   return (
@@ -57,7 +59,7 @@ const Dashboard = () => {
                       >
                         <Link to="/add-experience" style={{ color: "white" }}>
                           <span className="btn-inner--icon mr-1">
-                            <i className="ni ni-cloud-download-95" />
+                            <i className="fa fa-code" />
                           </span>
                           <span className="btn-inner--text">
                             Add Experience
@@ -71,7 +73,7 @@ const Dashboard = () => {
                       >
                         <Link to="/add-education" style={{ color: "white" }}>
                           <span className="btn-inner--icon mr-1">
-                            <i className="ni ni-cloud-download-95" />
+                            <i className="fa fa-code" />
                           </span>
                           <span className="btn-inner--text">Add Education</span>
                         </Link>
@@ -82,9 +84,97 @@ const Dashboard = () => {
               </div>
             </Container>
           </section>
-          {/* 1st Hero Variation */}
+
+          <section className="section section-lg ">
+            <Container>
+              <Row className="justify-content-center">
+                <Col lg="12">
+                  <h3>Experience Credentials</h3>
+                  <Table dark>
+                    <thead>
+                      <tr>
+                        <th>Company</th>
+                        <th>Title</th>
+                        <th>Years</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Facebook</td>
+                        <td>Developer</td>
+                        <td>2019-Now</td>
+                        <Button
+                          className="btn-1 mt-3"
+                          color="danger"
+                          size="sm"
+                          type="button"
+                        >
+                          Delete
+                        </Button>
+                      </tr>
+                      <tr>
+                        <td>Paysmosmo</td>
+                        <td>Front End Dev</td>
+                        <td>2017-2019</td>
+                        <Button
+                          className="btn-1 mt-3"
+                          color="danger"
+                          size="sm"
+                          type="button"
+                        >
+                          Delete
+                        </Button>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+
+          <section>
+            <Container>
+              <Row className="justify-content-center">
+                <Col lg="12">
+                  <h3>Education Credentials</h3>
+                  <Table dark>
+                    <thead>
+                      <tr>
+                        <th>School</th>
+                        <th>Degree</th>
+                        <th>Years</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>University of Lagos</td>
+                        <td>Bsc</td>
+                        <td>2015-2019</td>
+                        <Button
+                          className="btn-1 mt-3"
+                          color="danger"
+                          size="sm"
+                          type="button"
+                        >
+                          Delete
+                        </Button>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+          <section className="section section-lg ">
+            <Container>
+              <Button color="danger" size="lg" type="button" className="ml-1">
+                Delete Account
+              </Button>
+            </Container>
+          </section>
         </div>
       </main>
+      <SimpleFooter/>
     </div>
   );
 };
