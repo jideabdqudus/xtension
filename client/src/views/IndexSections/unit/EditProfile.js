@@ -45,23 +45,80 @@ const EditProfile = () => {
               </FormGroup>
               <FormGroup>
                 <Input type="select" name="select" id="exampleSelect">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>*Select Proffesional Status</option>
+                  <option>Developer</option>
+                  <option>Manager</option>
+                  <option>Student or Learning</option>
+                  <option>Instructor or Teacher</option>
+                  <option>Intern</option>
+                  <option>Other</option>
                 </Input>
-                <FormText>Give an idea of where you are at your career</FormText>
+                <FormText>
+                  Give an idea of where you are at your career
+                </FormText>
               </FormGroup>
             </Col>
             <Col lg="6" sm="6">
               <FormGroup>
                 <Input
                   className="form-control-alternative"
-                  placeholder="Name"
+                  placeholder="Where do you work"
                   type="text"
                 />
-                <FormText>Example help text that remains unchanged.</FormText>
+                <FormText>
+                  Could be your own company or where you work for
+                </FormText>
+              </FormGroup>
+              <FormGroup>
+                <Input
+                  className="form-control-alternative"
+                  placeholder="Location"
+                  type="text"
+                />
+                <FormText>City or State (e.g Lagos)</FormText>
+              </FormGroup>
+            </Col>
+            <Col lg="6" sm="6">
+              <FormGroup>
+                <Input
+                  className="form-control-alternative"
+                  placeholder="Skills"
+                  type="text"
+                />
+                <FormText>
+                  Please use comma seperated values e.g (HTML, CSS, PHP,
+                  Graphics, Maths)
+                </FormText>
+              </FormGroup>
+              <FormGroup>
+                <Input
+                  className="form-control-alternative"
+                  placeholder="Bio"
+                  type="textarea"
+                />
+                <FormText>Tell us a little bit about yourself</FormText>
+              </FormGroup>
+            </Col>
+            <Col lg="6" sm="6">
+            <FormGroup>
+              <InputGroup>
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <span className="fa fa-github"></span>
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input placeholder="Github Username" />
+              </InputGroup>
+              </FormGroup>
+              <FormGroup>
+              <InputGroup>
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <span className="fa fa-twitter"></span>
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input placeholder="Twitter Username" />
+              </InputGroup>
               </FormGroup>
             </Col>
           </Row>
