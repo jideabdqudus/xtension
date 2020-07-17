@@ -31,6 +31,7 @@ const EditProfile = () => {
           </Button>
           <h1>Edit Profile</h1>
           {/* Inputs (alternative) */}
+          <Form>
           <Row>
             <Col lg="6" sm="6">
               <FormGroup>
@@ -101,6 +102,8 @@ const EditProfile = () => {
             </Col>
             <Col lg="6" sm="6">
             <FormGroup>
+            <hr className="mb-1 mt-1"/>
+            <FormText className="mb-3">Add social network links</FormText>
               <InputGroup>
                 <InputGroupAddon addonType="prepend">
                   <InputGroupText>
@@ -122,6 +125,8 @@ const EditProfile = () => {
               </FormGroup>
             </Col>
           </Row>
+          <Button color="success" type="submit" className="btn-1">Submit</Button>
+          </Form>
         </Container>
       </div>
     </>
