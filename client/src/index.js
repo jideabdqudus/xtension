@@ -13,6 +13,7 @@ import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import DevelopersList from "views/IndexSections/unit/DevelopersList";
+import Dashboard from "views/IndexSections/unit/Dashboard";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -38,6 +39,11 @@ ReactDOM.render(
         path='/developers'
         exact
         render={props=> <DevelopersList {...props}/>}
+      />
+      <Route
+        path='/dashboard'
+        exact
+        render={props=> <Dashboard {...props}/>}
       />
       <Redirect to="/" />
     </Switch>
