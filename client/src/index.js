@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -18,53 +17,64 @@ import EditProfile from "views/IndexSections/unit/EditProfile";
 import AddExperience from "views/IndexSections/unit/AddExperience";
 import AddEducation from "views/IndexSections/unit/AddEducation";
 
+import { Provider } from "react-redux";
+import store from "./store";
+
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/" exact render={props => <Index {...props} />} />
-      <Route
-        path="/landing-page"
-        exact
-        render={props => <Landing {...props} />}
-      />
-      <Route path="/login-page" exact render={props => <Login {...props} />} />
-      <Route
-        path="/profile-page"
-        exact
-        render={props => <Profile {...props} />}
-      />
-      <Route
-        path="/register-page"
-        exact
-        render={props => <Register {...props} />}
-      />
-      <Route
-        path='/developers'
-        exact
-        render={props=> <DevelopersList {...props}/>}
-      />
-      <Route
-        path='/dashboard'
-        exact
-        render={props=> <Dashboard {...props}/>}
-      />
-      <Route
-        path='/edit-profile'
-        exact
-        render={props=> <EditProfile {...props}/>}
-      />
-      <Route
-        path='/add-experience'
-        exact
-        render={props=> <AddExperience {...props}/>}
-      />
-      <Route
-        path='/add-education'
-        exact
-        render={props=> <AddEducation {...props} />}
-      />
-      <Redirect to="/" />
-    </Switch>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <Fragment>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact render={(props) => <Index {...props} />} />
+          <Route
+            path="/landing-page"
+            exact
+            render={(props) => <Landing {...props} />}
+          />
+          <Route
+            path="/login-page"
+            exact
+            render={(props) => <Login {...props} />}
+          />
+          <Route
+            path="/profile-page"
+            exact
+            render={(props) => <Profile {...props} />}
+          />
+          <Route
+            path="/register-page"
+            exact
+            render={(props) => <Register {...props} />}
+          />
+          <Route
+            path="/developers"
+            exact
+            render={(props) => <DevelopersList {...props} />}
+          />
+          <Route
+            path="/dashboard"
+            exact
+            render={(props) => <Dashboard {...props} />}
+          />
+          <Route
+            path="/edit-profile"
+            exact
+            render={(props) => <EditProfile {...props} />}
+          />
+          <Route
+            path="/add-experience"
+            exact
+            render={(props) => <AddExperience {...props} />}
+          />
+          <Route
+            path="/add-education"
+            exact
+            render={(props) => <AddEducation {...props} />}
+          />
+          <Redirect to="/" />
+        </Switch>
+      </BrowserRouter>
+    </Fragment>
+  </Provider>,
   document.getElementById("root")
 );
