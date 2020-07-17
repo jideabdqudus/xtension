@@ -1,4 +1,22 @@
 import React from "react";
+import {
+    FormGroup,
+    Input,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroup,
+    FormText,
+    Form,
+    Container,
+    Row,
+    Button,
+    Col,
+    Label,
+  } from "reactstrap";
+  import { Link } from "react-router-dom";
+  import DashboardNav from "../layers/DashboardNav";
+  
+
 
 const AddEducation = () => {
   return (
@@ -10,7 +28,7 @@ const AddEducation = () => {
           <Button className="btn-1 mt-3" color="info" size="sm" type="button">
             <Link to="/dashboard">Go Back</Link>
           </Button>
-          <h1>Add Experience</h1>
+          <h1>Add Education</h1>
           {/* Inputs (alternative) */}
           <Form>
             <Row>
@@ -18,14 +36,14 @@ const AddEducation = () => {
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
-                    placeholder="Company"
+                    placeholder="School"
                     type="text"
                   />
                 </FormGroup>
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
-                    placeholder="Job Title"
+                    placeholder="Degree or Certification"
                     type="text"
                   />
                 </FormGroup>
@@ -34,17 +52,16 @@ const AddEducation = () => {
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
-                    placeholder="Job Description"
+                    placeholder="Program Description"
                     type="textarea"
                   />
                 </FormGroup>
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
-                    placeholder="Location"
+                    placeholder="Field of Study"
                     type="text"
                   />
-                  <FormText>City or State (e.g Lagos)</FormText>
                 </FormGroup>
               </Col>
               <Col lg="6" sm="6">
@@ -65,12 +82,6 @@ const AddEducation = () => {
                     id="toDate"
                     type="date"
                   />
-                </FormGroup>
-                <FormGroup check>
-                  <Input type="checkbox" name="check" id="currentJob" />
-                  <Label for="currentJob" check>
-                    Current Job
-                  </Label>
                 </FormGroup>
               </Col>
             </Row>

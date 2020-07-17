@@ -61,7 +61,6 @@ const AddExperience = () => {
                     placeholder="Location"
                     type="text"
                   />
-                  <FormText>City or State (e.g Lagos)</FormText>
                 </FormGroup>
               </Col>
               <Col lg="6" sm="6">

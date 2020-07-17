@@ -16,6 +16,7 @@ import DevelopersList from "views/IndexSections/unit/DevelopersList";
 import Dashboard from "views/IndexSections/unit/Dashboard";
 import EditProfile from "views/IndexSections/unit/EditProfile";
 import AddExperience from "views/IndexSections/unit/AddExperience";
+import AddEducation from "views/IndexSections/unit/AddEducation";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -56,6 +57,11 @@ ReactDOM.render(
         path='/add-experience'
         exact
         render={props=> <AddExperience {...props}/>}
+      />
+      <Route
+        path='/add-education'
+        exact
+        render={props=> <AddEducation {...props} />}
       />
       <Redirect to="/" />
     </Switch>
