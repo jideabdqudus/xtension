@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
-  Button,
   UncontrolledCollapse,
   DropdownMenu,
   DropdownItem,
@@ -14,7 +13,6 @@ import {
   UncontrolledDropdown,
   NavbarBrand,
   Navbar,
-  NavItem,
   Nav,
   Container,
   Row,

@@ -1,17 +1,8 @@
 import React from "react";
 // nodejs library that concatenates classes
-import classnames from "classnames";
 
 // reactstrap components
 import {
-  Card,
-  CardBody,
-  NavItem,
-  NavLink,
-  Nav,
-  Button,
-  TabContent,
-  TabPane,
   Row,
   Col,
   Container,
@@ -19,7 +10,6 @@ import {
 
 //core components
 import DemoNavbar from "components/Navbars/DemoNavbar";
-import SimpleFooter from "components/Footers/SimpleFooter";
 import Developers from "../layers/Developers";
 
 const DevelopersList = () => {
