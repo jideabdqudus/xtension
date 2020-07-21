@@ -10,20 +10,20 @@ const DashboardState = (props) => {
       id: 1,
     },
   };
+
+  const [state, dispatch] = useReducer(DashboardReducer, initialState);
+
+  //Add Profile
+
+  return (
+    <DashboardContext.Provider
+      value={{
+        profile: state.profile,
+      }}
+    >
+      {props.children}
+    </DashboardContext.Provider>
+  );
 };
-
-const [state, dispatch] = useReducer(DashboardReducer, initialState);
-
-//Add Profile
-
-return (
-  <DashboardContext.Provider
-    value={{
-      profile: state.profile,
-    }}
-  >
-    {props.children}
-  </DashboardContext.Provider>
-);
 
 export default DashboardState;
