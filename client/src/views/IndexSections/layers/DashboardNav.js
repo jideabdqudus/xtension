@@ -22,7 +22,7 @@ const DashboardNav = () => {
     <>
       <Navbar className="navbar-dark bg-primary" expand="lg">
         <Container>
-          <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
+          <NavbarBrand href="/">
             Primary Color
           </NavbarBrand>
           <button className="navbar-toggler" id="navbar-primary">
