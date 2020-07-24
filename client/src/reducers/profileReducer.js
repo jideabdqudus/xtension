@@ -1,12 +1,16 @@
-const { ADD_PROFILE } = require("actions/Types");
-
 import { ADD_PROFILE } from "../actions/Types";
 
 const initialState = {
   users: [
     {
       id: 1,
-      name: "John Doe",
+      name: "Abdul-Qudus Olajide",
+      role: "Instructor or Teacher",
+      location: "Lagos",
+      skills: ["HTML", "CSS", "Bootstrap"],
+      bio:
+        "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
+        
     },
     {
       id: 2,
