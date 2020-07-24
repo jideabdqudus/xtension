@@ -17,8 +17,12 @@ import EditProfile from "views/IndexSections/unit/EditProfile";
 import AddExperience from "views/IndexSections/unit/AddExperience";
 import AddEducation from "views/IndexSections/unit/AddEducation";
 
+import {Provider} from 'react-redux'
+import store from './store'
+
 
 ReactDOM.render(
+  <Provider store={store}>
     <BrowserRouter>
       <Switch>
         <Route path="/" exact render={(props) => <Index {...props} />} />
@@ -70,6 +74,6 @@ ReactDOM.render(
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>
- ,
+    </Provider>,
   document.getElementById("root")
 );
