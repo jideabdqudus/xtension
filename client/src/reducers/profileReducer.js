@@ -10,11 +10,24 @@ const initialState = {
       skills: ["HTML", "CSS", "Bootstrap"],
       bio:
         "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
-        
     },
     {
-      id: 2,
+      id: 1,
+      name: "John Doe",
+      role: "Developer",
+      location: "Ibadan",
+      skills: ["HTML", "PHP", "Bootstrap"],
+      bio:
+        "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
+    },
+    {
+      id: 1,
       name: "Jane Doe",
+      role: "Designer",
+      location: "Kebbi",
+      skills: ["Ruby", "CSS", "Bootstrap"],
+      bio:
+        "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
     },
   ],
 };
