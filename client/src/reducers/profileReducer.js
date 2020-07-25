@@ -5,6 +5,7 @@ const initialState = {
     {
       id: 1,
       name: "Abdul-Qudus Olajide",
+      username:"jideabdqudus",
       role: "Instructor or Teacher",
       location: "Lagos",
       skills: ["HTML", "CSS", "Gatsby"],
@@ -44,6 +45,7 @@ const initialState = {
       id: 2,
       name: "John Doe",
       role: "Developer",
+      username:"doughdoe",
       location: "Ibadan",
       skills: ["HTML", "PHP", "Wordpress"],
       bio:
@@ -82,6 +84,7 @@ const initialState = {
       id: 3,
       name: "Jane Doe",
       role: "Designer",
+      username:"janeyunno",
       location: "Kebbi",
       skills: ["Ruby", "CSS", "Bootstrap"],
       bio:
