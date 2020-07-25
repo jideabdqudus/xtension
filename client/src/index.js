@@ -37,7 +37,7 @@ ReactDOM.render(
           render={(props) => <Login {...props} />}
         />
         <Route
-          path="/profile-page"
+          path="/profile-page/:name"
           exact
           render={(props) => <Profile {...props} />}
         />

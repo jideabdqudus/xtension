@@ -16,17 +16,21 @@ import {
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 
-class Profile extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+import {useSelector} from 'react-redux'
+
+const Profile =(props)=> {
+  
+  const profile = useSelector((state) => state.profileReducer);
+  var name = props.match.params.name;
+  var user = profile.users.filter((user) => user.name === name);
+  user = user[0];
+
+
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref="main">
+        {console.log(props.match.params.name)}
+        <main className="profile-page">
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-default alpha-4">
@@ -95,7 +99,7 @@ class Profile extends React.Component {
                     </Col>
                   </Row>
                   <div className="text-center mt-5">
-                    <h3>Jessica Jones </h3>
+                    <h3>{user.name} </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
                       Bucharest, Romania
@@ -215,6 +219,5 @@ class Profile extends React.Component {
       </>
     );
   }
-}
 
 export default Profile;

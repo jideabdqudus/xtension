@@ -81,7 +81,7 @@ const Developers = () => {
                   <Col lg="4"></Col>
                   <Col lg="4">
                     <Button color="info" size="sm" outline type="button">
-                      <Link to={`/profile-page/${user.id}`}>View Profile</Link>
+                      <Link to={`/profile-page/${user.name}`}>View Profile</Link>
                     </Button>
                   </Col>
                   <Col lg="4"></Col>
