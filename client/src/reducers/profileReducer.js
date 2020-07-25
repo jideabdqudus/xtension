@@ -50,6 +50,33 @@ const initialState = {
         "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
       twitter: "https://twitter.com/jideabdqudus2",
       github: "https://github.com/jideabdqudus2",
+      experience: [
+        {
+          company: "VGG",
+          position: "Business Analyst",
+          location: "Lagos",
+          start: "2019-12-10",
+          end: "now",
+          description: "Tech",
+        },
+        {
+          company: "Oando",
+          position: "Attendant",
+          location: "Lagos",
+          start: "2017-02-10",
+          end: "2019-10-10",
+          description: "Petroleum Company",
+        },
+      ],
+      education: [
+        {
+          school: "University of Ibadan",
+          degree: "Bsc",
+          start: "2015-02-10",
+          end: "2018-10-10",
+          field: "Business Adminisitration",
+        },
+      ],
     },
     {
       id: 3,
@@ -61,6 +88,33 @@ const initialState = {
         "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
       twitter: "https://twitter.com/jideabdqudus3",
       github: "https://github.com/jideabdqudus3",
+      experience: [
+        {
+          company: "Fundall",
+          position: "CEO",
+          location: "Lagos",
+          start: "2019-12-10",
+          end: "now",
+          description: "eCommerce",
+        },
+        {
+          company: "Softcom",
+          position: "Designer",
+          location: "Lagos",
+          start: "2017-02-10",
+          end: "2019-10-10",
+          description: "Tech",
+        },
+      ],
+      education: [
+        {
+          school: "University of Kebbi",
+          degree: "Bsc",
+          start: "2015-02-10",
+          end: "2018-10-10",
+          field: "Engineering",
+        },
+      ],
     },
   ],
 };

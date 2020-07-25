@@ -17,6 +17,7 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Profile = (props) => {
   const profile = useSelector((state) => state.profileReducer);
@@ -84,7 +85,9 @@ const Profile = (props) => {
                   </Col>
                   <Col className="order-lg-1" lg="4">
                     <div className="card-profile-stats d-flex justify-content-center">
-                      <Button>Back</Button>
+                     <Link to="/developers"> <Button color="primary" size="sm" type="button">
+                        Go Back
+                      </Button></Link>
                     </div>
                   </Col>
                 </Row>
