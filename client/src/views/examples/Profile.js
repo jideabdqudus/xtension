@@ -99,15 +99,14 @@ const Profile =(props)=> {
                     </div>
                     <div className="h6 mt-4">
                       <i className="ni business_briefcase-24 mr-2" />
-                      Solution Manager - Creative Tim Officer
+                      {user.role}
                     </div>
                     <Row className="justify-content-center">
                       <div>
                         <Button
                           className="btn-icon-only rounded-circle"
                           color="twitter"
-                          href="https://twitter.com/jideabdqudus"
-                          id="tooltip475038071"
+                          href={user.twitter}
                           target="_blank"
                         >
                           <span className="btn-inner--icon">
@@ -120,8 +119,7 @@ const Profile =(props)=> {
                         <Button
                           className="btn-icon-only rounded-circle ml-1"
                           color="github"
-                          href="https://github.com/jideabdqudus"
-                          id="tooltip49550721"
+                          href={user.github}
                           target="_blank"
                         >
                           <span className="btn-inner--icon">
@@ -135,11 +133,7 @@ const Profile =(props)=> {
                     <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
-                          An artist of considerable range, Ryan — the name taken
-                          by Melbourne-raised, Brooklyn-based Nick Murphy —
-                          writes, performs and records all of his own music,
-                          giving it a warm, intimate feel with a solid groove
-                          structure. An artist of considerable range.
+                          {user.bio}
                         </p>
                       </Col>
                     </Row>
