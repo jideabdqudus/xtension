@@ -88,7 +88,11 @@ const Profile =(props)=> {
                       </div>
                     </Col>
                     <Col className="order-lg-1" lg="4">
-                      <div className="card-profile-stats d-flex justify-content-center"></div>
+                      <div className="card-profile-stats d-flex justify-content-center">
+                      {user.experience.map((expert)=>(
+                       <h1>{expert.company}</h1> 
+                      ))}
+                      </div>
                     </Col>
                   </Row>
                   <div className="text-center mt-5">
