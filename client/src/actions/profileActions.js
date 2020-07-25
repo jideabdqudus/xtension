@@ -1,7 +1,7 @@
 import {ADD_PROFILE} from './Types'
 
-export const addProfile =(form)=>{
+export const addProfile =(edit)=>{
     return {
-        type: ADD_PROFILE, payload: form
+        type: ADD_PROFILE, payload: edit
     }
 }

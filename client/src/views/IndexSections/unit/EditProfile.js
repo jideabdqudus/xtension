@@ -18,15 +18,14 @@ import { Link } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 
-import {addProfile} from '../../../actions/profileActions'
+import { addProfile } from "../../../actions/profileActions";
 
 const EditProfile = () => {
-
   const [edit, setEdit] = useState({
+    name: "",
     username: "",
     role: "",
     location: "",
-    company: "",
     skills: "",
     bio: "",
     twitter: "",
@@ -61,6 +60,14 @@ const EditProfile = () => {
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
+                    placeholder="Your Name"
+                    name="name"
+                    onChange={onChange}
+                    type="text"
+                  />
+                  <br />
+                  <Input
+                    className="form-control-alternative"
                     placeholder="Username"
                     name="username"
                     onChange={onChange}
@@ -70,6 +77,8 @@ const EditProfile = () => {
                     A unique name for your profile URL, full name, nickname.
                   </FormText>
                 </FormGroup>
+              </Col>
+              <Col lg="6" sm="6">
                 <FormGroup>
                   <Input
                     type="select"
@@ -87,20 +96,6 @@ const EditProfile = () => {
                   </Input>
                   <FormText>
                     Give an idea of where you are at your career
-                  </FormText>
-                </FormGroup>
-              </Col>
-              <Col lg="6" sm="6">
-                <FormGroup>
-                  <Input
-                    className="form-control-alternative"
-                    placeholder="Where do you work"
-                    type="text"
-                    name="company"
-                    onChange={onChange}
-                  />
-                  <FormText>
-                    Could be your own company or where you work for
                   </FormText>
                 </FormGroup>
                 <FormGroup>
