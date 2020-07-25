@@ -16,10 +16,11 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+
+import {addProfile} from '../../../actions/profileActions'
 
 const EditProfile = () => {
-  const profile = useSelector((state) => state.profileReducer);
 
   const [edit, setEdit] = useState({
     username: "",
@@ -32,11 +33,16 @@ const EditProfile = () => {
     github: "",
   });
 
+  const dispatch = useDispatch(addProfile(edit));
+
   const onSubmit = (e) => {
     e.preventDefault();
+    dispatch(addProfile(edit));
   };
 
-  const onChange = (e) => {};
+  const onChange = (e) => {
+    setEdit({ ...edit, [e.target.name]: e.target.value });
+  };
 
   return (
     <>
