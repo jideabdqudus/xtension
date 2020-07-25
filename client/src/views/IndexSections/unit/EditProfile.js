@@ -32,6 +32,12 @@ const EditProfile = () => {
     github: "",
   });
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const onChange = (e) => {};
+
   return (
     <>
       <DashboardNav />
@@ -43,13 +49,15 @@ const EditProfile = () => {
           </Button>
           <h1>Edit Profile</h1>
           {/* Inputs (alternative) */}
-          <Form>
+          <Form onSubmit={onSubmit}>
             <Row>
               <Col lg="6" sm="6">
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
                     placeholder="Username"
+                    name="username"
+                    onChange={onChange}
                     type="text"
                   />
                   <FormText>
@@ -57,7 +65,12 @@ const EditProfile = () => {
                   </FormText>
                 </FormGroup>
                 <FormGroup>
-                  <Input type="select" name="select" id="exampleSelect">
+                  <Input
+                    type="select"
+                    name="role"
+                    id="exampleSelect"
+                    onChange={onChange}
+                  >
                     <option>*Select Proffesional Status</option>
                     <option>Developer</option>
                     <option>Manager</option>
@@ -77,6 +90,8 @@ const EditProfile = () => {
                     className="form-control-alternative"
                     placeholder="Where do you work"
                     type="text"
+                    name="company"
+                    onChange={onChange}
                   />
                   <FormText>
                     Could be your own company or where you work for
@@ -86,6 +101,8 @@ const EditProfile = () => {
                   <Input
                     className="form-control-alternative"
                     placeholder="Location"
+                    name="location"
+                    onChange={onChange}
                     type="text"
                   />
                   <FormText>City or State (e.g Lagos)</FormText>
@@ -96,6 +113,8 @@ const EditProfile = () => {
                   <Input
                     className="form-control-alternative"
                     placeholder="Skills"
+                    name="skills"
+                    onChange={onChange}
                     type="text"
                   />
                   <FormText>
@@ -107,6 +126,8 @@ const EditProfile = () => {
                   <Input
                     className="form-control-alternative"
                     placeholder="Bio"
+                    name="bio"
+                    onChange={onChange}
                     type="textarea"
                   />
                   <FormText>Tell us a little bit about yourself</FormText>
@@ -122,7 +143,11 @@ const EditProfile = () => {
                         <span className="fa fa-github"></span>
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Github Username" />
+                    <Input
+                      placeholder="Github Username"
+                      name="github"
+                      onChange={onChange}
+                    />
                   </InputGroup>
                 </FormGroup>
                 <FormGroup>
@@ -132,7 +157,11 @@ const EditProfile = () => {
                         <span className="fa fa-twitter"></span>
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Twitter Username" />
+                    <Input
+                      placeholder="Twitter Username"
+                      name="twitter"
+                      onChange={onChange}
+                    />
                   </InputGroup>
                 </FormGroup>
               </Col>
