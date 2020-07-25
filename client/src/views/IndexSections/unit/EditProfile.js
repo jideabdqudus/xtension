@@ -26,7 +26,7 @@ const EditProfile = () => {
     username: "",
     role: "",
     location: "",
-    skills: "",
+    skills: [],
     bio: "",
     twitter: "",
     github: "",
