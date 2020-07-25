@@ -80,18 +80,11 @@ const Profile =(props)=> {
                       lg="4"
                     >
                       <div className="card-profile-actions py-4 mt-lg-0">
+                      {user.skills.map((skill) => (
                         <Badge color="primary" pill className="mr-1">
-                          C#
+                          {skill}
                         </Badge>
-                        <Badge color="primary" pill className="mr-1">
-                          PHP
-                        </Badge>
-                        <Badge color="primary" pill className="mr-1">
-                          JAVASCRIPT
-                        </Badge>
-                        <Badge color="primary" pill className="mr-1">
-                          RUBY
-                        </Badge>
+                      ))}
                       </div>
                     </Col>
                     <Col className="order-lg-1" lg="4">
@@ -102,7 +95,7 @@ const Profile =(props)=> {
                     <h3>{user.name} </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
+                      {user.location}
                     </div>
                     <div className="h6 mt-4">
                       <i className="ni business_briefcase-24 mr-2" />
