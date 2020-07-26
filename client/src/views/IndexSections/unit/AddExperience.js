@@ -14,7 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import DashboardNav from "../layers/DashboardNav";
 
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 const AddExperience = () => {
   const profile = useSelector((state) => state.profileReducer);
@@ -127,26 +127,26 @@ const AddExperience = () => {
                       </tr>
                     </thead>
                     {profile.users.map((user) => (
-                      <h1>{user.experience.map((expert)=>(
-                       <h1> {expert.company}</h1>
-                      ))}</h1>
-                      ))}
                       <tbody>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td> </td>
-                          <Button
-                            className="btn-1 mt-3"
-                            color="danger"
-                            size="sm"
-                            type="button"
-                          >
-                            Delete
-                          </Button>
-                        </tr>
+                        {user.experience.map((expert) => (
+                          <tr>
+                            <td>{expert.company}</td>
+                            <td>{expert.position}</td>
+                            <td>
+                              {expert.start} till {expert.end}
+                            </td>
+                            <Button
+                              className="btn-1 mt-3"
+                              color="danger"
+                              size="sm"
+                              type="button"
+                            >
+                              Delete
+                            </Button>
+                          </tr>
+                        ))}
                       </tbody>
-                   
+                    ))}
                   </Table>
                 </Col>
               </Row>
