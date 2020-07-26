@@ -14,7 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import DashboardNav from "../layers/DashboardNav";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const AddExperience = () => {
   const profile = useSelector((state) => state.profileReducer);
@@ -22,6 +22,7 @@ const AddExperience = () => {
   const onSubmit = () => {};
 
   const onChange = () => {};
+  
   return (
     <>
       <DashboardNav />
