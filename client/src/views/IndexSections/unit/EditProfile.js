@@ -119,7 +119,7 @@ const EditProfile = () => {
                     type="text"
                   />
                   <FormText>
-                    Please use comma seperated values e.g (HTML, CSS, PHP,
+                    Please use comma seperated values e.g (HTML, CSS,
                     Graphics, Maths)
                   </FormText>
                 </FormGroup>
