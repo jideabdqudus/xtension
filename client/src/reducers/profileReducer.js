@@ -8,7 +8,7 @@ const initialState = {
       username:"jideabdqudus",
       role: "Instructor or Teacher",
       location: "Lagos",
-      skills: ["HTML", "CSS", "Gatsby"],
+      skills: ["HTML", "CSS", "Gatsby", "Node"],
       bio:
         "Lorem Ipsum dolor sit amet - An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,",
       twitter: "https://twitter.com/jideabdqudus",
