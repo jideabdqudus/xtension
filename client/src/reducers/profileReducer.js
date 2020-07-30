@@ -20,7 +20,7 @@ const initialState = {
           location: "Lagos",
           start: "2019-12-10",
           end: "now",
-          description: "e-Commerce",
+          description: "eCommerce",
         },
         {
           company: "TechEnd",
