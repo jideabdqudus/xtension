@@ -86,7 +86,9 @@ const Dashboard = () => {
                         <tr>
                           <td>{expert.company}</td>
                           <td>{expert.position}</td>
-                          <td>{expert.start} till {expert.end}</td>
+                          <td>
+                            {expert.start} ~ {expert.end}
+                          </td>
                           <Button
                             className="btn-1 mt-3"
                             color="danger"
@@ -118,19 +120,23 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>University of Lagos</td>
-                        <td>Bsc</td>
-                        <td>2015-2019</td>
-                        <Button
-                          className="btn-1 mt-3"
-                          color="danger"
-                          size="sm"
-                          type="button"
-                        >
-                          Delete
-                        </Button>
-                      </tr>
+                      {dashboard.user.education((student) => (
+                        <tr>
+                          <td>{student.school}</td>
+                          <td>{student.degree}</td>
+                          <td>
+                            {student.start} ~ {student.end}
+                          </td>
+                          <Button
+                            className="btn-1 mt-3"
+                            color="danger"
+                            size="sm"
+                            type="button"
+                          >
+                            Delete
+                          </Button>
+                        </tr>
+                      ))}
                     </tbody>
                   </Table>
                 </Col>
