@@ -82,20 +82,21 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
-                    {dashboard.experience.map(())}
-                      <tr>
-                        <td>Facebook</td>
-                        <td>Developer</td>
-                        <td>2019-Now</td>
-                        <Button
-                          className="btn-1 mt-3"
-                          color="danger"
-                          size="sm"
-                          type="button"
-                        >
-                          Delete
-                        </Button>
-                      </tr>
+                      {dashboard.user.experience.map((expert) => (
+                        <tr>
+                          <td>{expert.company}</td>
+                          <td>{expert.position}</td>
+                          <td>{expert.start} till {expert.end}</td>
+                          <Button
+                            className="btn-1 mt-3"
+                            color="danger"
+                            size="sm"
+                            type="button"
+                          >
+                            Delete
+                          </Button>
+                        </tr>
+                      ))}
                     </tbody>
                   </Table>
                 </Col>
