@@ -22,10 +22,6 @@ const Dashboard = () => {
                     <h1 className="display-3 text-white">
                       Your Dashboard <span>welcome, {dashboard.user.name}</span>
                     </h1>
-                    <p className="lead text-white">
-                      Last Visited on{" "}
-                      <span className="text-muted">27/04/20</span>
-                    </p>
                     <div className="btn-wrapper">
                       <Button
                         className="btn-icon mb-2 mb-sm-0"
@@ -86,23 +82,11 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
+                    {dashboard.experience.map(())}
                       <tr>
                         <td>Facebook</td>
                         <td>Developer</td>
                         <td>2019-Now</td>
-                        <Button
-                          className="btn-1 mt-3"
-                          color="danger"
-                          size="sm"
-                          type="button"
-                        >
-                          Delete
-                        </Button>
-                      </tr>
-                      <tr>
-                        <td>Paysmosmo</td>
-                        <td>Front End Dev</td>
-                        <td>2017-2019</td>
                         <Button
                           className="btn-1 mt-3"
                           color="danger"
