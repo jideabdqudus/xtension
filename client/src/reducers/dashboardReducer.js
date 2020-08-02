@@ -1,8 +1,8 @@
 import { EDIT_PROFILE } from "actions/Types";
 
 const initialState = {
+  id: 1,
   user: {
-    id: 1,
     name: "Abdul-Qudus Olajide",
     username: "jideabdqudus",
     role: "Instructor or Teacher",
