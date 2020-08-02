@@ -45,6 +45,7 @@ const EditProfile = () => {
     setEdit({ ...edit, [e.target.name]: e.target.value });
   };
 
+
   return (
     <>
       <DashboardNav />
