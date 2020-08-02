@@ -1,4 +1,4 @@
-
+import { EDIT_PROFILE } from "actions/Types";
 
 const initialState = {
   user: {
@@ -40,12 +40,16 @@ const initialState = {
       },
     ],
   },
-  isAuthenticated: true
+  isAuthenticated: true,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    
+    case EDIT_PROFILE:
+      return {
+        ...state,
+        user: action.payload
+      };
     default:
       return state;
   }

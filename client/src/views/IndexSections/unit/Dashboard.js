@@ -120,7 +120,7 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {dashboard.user.education((student) => (
+                      {dashboard.user.education.map((student) => (
                         <tr>
                           <td>{student.school}</td>
                           <td>{student.degree}</td>
