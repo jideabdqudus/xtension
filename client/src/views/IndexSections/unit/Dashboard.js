@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 import DashboardNav from "../layers/DashboardNav";
 import { Link } from "react-router-dom";
-import {useSelecor} from 'react-redux'
+import {useSelector} from 'react-redux'
 import SimpleFooter from "components/Footers/SimpleFooter";
 
 const Dashboard = () => {
