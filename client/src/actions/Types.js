@@ -1,2 +1,3 @@
 export const ADD_PROFILE = "ADD_PROFILE"
 export const EDIT_PROFILE = "EDIT_PROFILE"
+export const ADD_EXPERIENCE = "ADD_EXPERIENCE"

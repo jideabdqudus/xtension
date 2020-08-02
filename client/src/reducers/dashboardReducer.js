@@ -1,4 +1,5 @@
 import { EDIT_PROFILE } from "actions/Types";
+import { ADD_EXPERIENCE } from "actions/Types";
 
 const initialState = {
   id: 1,
@@ -45,6 +46,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case ADD_EXPERIENCE:
+      return {
+        ...state,
+        experience: [...state.experience, action.payload],
+      };
     case EDIT_PROFILE:
       return {
         ...state,

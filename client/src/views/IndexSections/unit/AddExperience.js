@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   FormGroup,
@@ -14,14 +14,32 @@ import {
 import { Link } from "react-router-dom";
 import DashboardNav from "../layers/DashboardNav";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { addExperience } from "../../../actions/dashboardActions";
 
 const AddExperience = () => {
-  const profile = useSelector((state) => state.profileReducer);
+  const dashboard = useSelector((state) => state.dashboardReducer);
 
-  const onSubmit = () => {};
+  const [experience, setExperience] = useState({
+    company: "",
+    position: "",
+    location: "",
+    start: "",
+    end: "",
+    description: "",
+  });
+  const dispatch = useDispatch(addExperience(experience));
 
-  const onChange = () => {};
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addExperience(experience));
+  };
+
+  const onChange = (e) => {
+    setExperience({ ...experience, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <DashboardNav />
@@ -126,27 +144,25 @@ const AddExperience = () => {
                         <th>Years</th>
                       </tr>
                     </thead>
-                    {profile.users.map((user) => (
-                      <tbody>
-                        {user.experience.map((expert) => (
-                          <tr>
-                            <td>{expert.company}</td>
-                            <td>{expert.position}</td>
-                            <td>
-                              {expert.start} till {expert.end}
-                            </td>
-                            <Button
-                              className="btn-1 mt-3"
-                              color="danger"
-                              size="sm"
-                              type="button"
-                            >
-                              Delete
-                            </Button>
-                          </tr>
-                        ))}
-                      </tbody>
-                    ))}
+                    <tbody>
+                      {dashboard.experience.map((expert) => (
+                        <tr>
+                          <td>{expert.company}</td>
+                          <td>{expert.position}</td>
+                          <td>
+                            {expert.start} till {expert.end}
+                          </td>
+                          <Button
+                            className="btn-1 mt-3"
+                            color="danger"
+                            size="sm"
+                            type="button"
+                          >
+                            Delete
+                          </Button>
+                        </tr>
+                      ))}
+                    </tbody>
                   </Table>
                 </Col>
               </Row>
