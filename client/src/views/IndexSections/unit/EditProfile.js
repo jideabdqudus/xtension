@@ -18,7 +18,9 @@ import { Link } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 
-import { addProfile } from "../../../actions/profileActions";
+import { editProfile } from "../../../actions/dashboardActions";
+
+
 
 const EditProfile = () => {
   const [edit, setEdit] = useState({
@@ -32,11 +34,11 @@ const EditProfile = () => {
     github: "",
   });
 
-  const dispatch = useDispatch(addProfile(edit));
+  const dispatch = useDispatch(editProfile(edit));
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(addProfile(edit));
+    dispatch(editProfile(edit));
   };
 
   const onChange = (e) => {
