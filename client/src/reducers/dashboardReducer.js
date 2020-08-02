@@ -1,5 +1,4 @@
-import { EDIT_PROFILE } from "actions/Types";
-import { ADD_EXPERIENCE } from "actions/Types";
+import { EDIT_PROFILE, ADD_EXPERIENCE, ADD_EDUCATION } from "actions/Types";
 
 const initialState = {
   id: 1,
@@ -50,6 +49,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         experience: [...state.experience, action.payload],
+      };
+    case ADD_EDUCATION:
+      return {
+        ...state,
+        education: [...state.education, action.payload],
       };
     case EDIT_PROFILE:
       return {

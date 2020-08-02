@@ -1,20 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import {
-    FormGroup,
-    Input,
-    Form,
-    Container,
-    Row,
-    Button,
-    Col,
-    Label,
-  } from "reactstrap";
-  import { Link } from "react-router-dom";
-  import DashboardNav from "../layers/DashboardNav";
-  
+  FormGroup,
+  Input,
+  Form,
+  Container,
+  Row,
+  Button,
+  Col,
+  Label,
+} from "reactstrap";
+import { Link } from "react-router-dom";
+import DashboardNav from "../layers/DashboardNav";
 
+import { useDispatch } from "react-redux";
+
+import { addEducation } from "../../../actions/dashboardActions";
 
 const AddEducation = () => {
+  const [education, setEducation] = useState({
+    school: "",
+    degree: "",
+    start: "",
+    end: "",
+    field: "",
+  });
+  const dispatch = useDispatch(addEducation(education));
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addEducation(education));
+  };
+
+  const onChange = (e) => {
+    setEducation({ ...education, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <DashboardNav />
@@ -26,7 +46,7 @@ const AddEducation = () => {
           </Button>
           <h1>Add Education</h1>
           {/* Inputs (alternative) */}
-          <Form>
+          <Form onSubmit={onSubmit}>
             <Row>
               <Col lg="6" sm="6">
                 <FormGroup>
@@ -34,6 +54,8 @@ const AddEducation = () => {
                     className="form-control-alternative"
                     placeholder="School"
                     type="text"
+                    name="school"
+                    onChange={onChange}
                   />
                 </FormGroup>
                 <FormGroup>
@@ -41,6 +63,8 @@ const AddEducation = () => {
                     className="form-control-alternative"
                     placeholder="Degree or Certification"
                     type="text"
+                    name="degree"
+                    onChange={onChange}
                   />
                 </FormGroup>
               </Col>
@@ -48,15 +72,10 @@ const AddEducation = () => {
                 <FormGroup>
                   <Input
                     className="form-control-alternative"
-                    placeholder="Program Description"
-                    type="textarea"
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Input
-                    className="form-control-alternative"
                     placeholder="Field of Study"
+                    name="field"
                     type="text"
+                    onChange={onChange}
                   />
                 </FormGroup>
               </Col>
@@ -68,6 +87,8 @@ const AddEducation = () => {
                     placeholder="Date"
                     id="fromDate"
                     type="date"
+                    name="start"
+                    onChange={onChange}
                   />
                 </FormGroup>
                 <FormGroup>
@@ -77,6 +98,8 @@ const AddEducation = () => {
                     placeholder="Date"
                     id="toDate"
                     type="date"
+                    name="end"
+                    onChange={onChange}
                   />
                 </FormGroup>
               </Col>
