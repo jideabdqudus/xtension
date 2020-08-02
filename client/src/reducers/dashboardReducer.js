@@ -1,4 +1,4 @@
-import { ADD_PROFILE } from "../actions/Types";
+
 
 const initialState = {
   user: {

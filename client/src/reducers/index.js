@@ -2,4 +2,4 @@ import { combineReducers } from "redux";
 import profileReducer from "./profileReducer";
 import dashboardReducer from './dashboardReducer'
 
-export default combineReducers({ profileReducer: profileReducer });
+export default combineReducers({ profileReducer: profileReducer, dashboardReducer: dashboardReducer });
