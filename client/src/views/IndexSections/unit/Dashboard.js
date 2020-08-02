@@ -82,7 +82,7 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {dashboard.user.experience.map((expert) => (
+                      {dashboard.experience.map((expert) => (
                         <tr>
                           <td>{expert.company}</td>
                           <td>{expert.position}</td>
@@ -120,7 +120,7 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {dashboard.user.education.map((student) => (
+                      {dashboard.education.map((student) => (
                         <tr>
                           <td>{student.school}</td>
                           <td>{student.degree}</td>
