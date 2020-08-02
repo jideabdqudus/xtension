@@ -1,18 +1,13 @@
 import React from "react";
 
-import {
-  Button,
-  Container,
-  Table,
-  Row,
-  Col,
-} from "reactstrap";
+import { Button, Container, Table, Row, Col } from "reactstrap";
 import DashboardNav from "../layers/DashboardNav";
 import { Link } from "react-router-dom";
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux";
 import SimpleFooter from "components/Footers/SimpleFooter";
 
 const Dashboard = () => {
+  const dashboard = useSelector((state) => state.dashboardReducer);
   return (
     <div>
       <DashboardNav />
@@ -25,7 +20,7 @@ const Dashboard = () => {
                 <Row>
                   <Col lg="6">
                     <h1 className="display-3 text-white">
-                      Your Dashboard <span>welcome, Jide.</span>
+                      Your Dashboard <span>welcome, {dashboard.user.name}</span>
                     </h1>
                     <p className="lead text-white">
                       Last Visited on{" "}
